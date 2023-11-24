@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Trabalho Final - Resultados</title>
+</head>
+<body class="bg-dark">
+    <div class="container mt-5">
+        <h2 class="text-center text-white">Resultados</h2>
+        <div class="text-center">
+            <p class="text-center text-white">Acurácia: {{ accuracy }}</p>
+            <p class="text-center text-white">F1-Score (Macro Average): {{ f1_macro }}</p>
+            <p class="text-center text-white">Matriz de Confusão:</p>
+            <img src="data:image/png;base64,{{ plot_url }}" alt="Matriz de Confusão" class="img-fluid">
+        </div>
+        <div class="text-center mt-3">
+            <a href="{{ url_for('index') }}" class="btn btn-outline-light mb-5">Voltar à Página Inicial</a>
+        </div>
+    </div>
+</body>
+</html>
