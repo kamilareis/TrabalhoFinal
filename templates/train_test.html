@@ -9,21 +9,21 @@
 <body class="bg-dark">
     <div class="container mt-5">
         <h2 class="text-center text-white">Treinamento e Teste</h2>
-        <form method="post" class="form-sm">
+        <form method="post" class="form-sm" action="/train_test">
             <div class="form-group">
                 <label for="classifier" class="text-white text-sm">Escolha o Classificador:</label>
                 <select class="form-control form-control-sm" id="classifier" name="classifier">
                     <option value="KNN">KNN</option>
                     <option value="SVM">SVM</option>
-                    <option value="Decision Tree">Decision Tree</option>
-                    <option value="Random Forest">Random Forest</option>
+                    <option value="Decision Tree">DT</option>
+                    <option value="Random Forest">RF</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="n_neighbors" class="text-white text-sm">Número de Vizinhos (KNN):</label>
+                <label for="n_neighbors" class="text-white text-sm">Parâmetros:</label>
                 <input type="number" class="form-control form-control-sm" id="n_neighbors" name="n_neighbors" value="1" min="1">
             </div>
-            <button type="submit" class="btn btn-outline-light btn-sm">
+            <button type="submit" value="Train and Test" class="btn btn-outline-light btn-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                 </svg>

@@ -15,14 +15,15 @@ app = Flask(__name__)
 iris = load_iris()
 X_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, test_size=0.2, random_state=42)
 
+
 @app.route('/')
 def index():
     return render_template('index.html')
 
+
 @app.route('/train_test', methods=['GET', 'POST'])
 def train_test():
     if request.method == 'POST':
-
         classifier_name = request.form['classifier']
         n_neighbors = int(request.form['n_neighbors'])
 
@@ -59,6 +60,7 @@ def train_test():
         return render_template('results.html', accuracy=accuracy, f1_macro=f1_macro, plot_url=plot_url)
 
     return render_template('train_test.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
